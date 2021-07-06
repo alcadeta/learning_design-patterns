@@ -13,14 +13,9 @@ namespace Singleton
         {
             get
             {
-                // This same lock is used on *every* call reference to the Singleton
-                lock (_padlock)
+                lock (_padlock) // This lock is used on *every* call reference to the Singleton
                     return _instance ??= new();
             }
-        }
-
-        private SingletonWithLocking()
-        {
         }
     }
 }

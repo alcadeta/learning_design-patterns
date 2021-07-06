@@ -10,9 +10,5 @@ namespace Singleton
         private static NaiveSingleton? _instance;
 
         public static NaiveSingleton Instance => _instance ??= new();
-
-        private NaiveSingleton()
-        {
-        }
     }
 }
